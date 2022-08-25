@@ -37,9 +37,9 @@ class Bill
     end
     
     def self.final_outp
-        
+        @@total_tax=@@total_tax.round(2)
         puts "sales tax: #{@@total_tax}"
-         @@total_tax=@@total_tax.round(2)
+         @@total_price=@@total_price.round(2)
         puts "Total: #{@@total_price}"
     end
     

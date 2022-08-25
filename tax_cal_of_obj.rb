@@ -13,7 +13,22 @@ module Tax
 
         tax*=price/100
         tax*=no_of_items
-        tax=tax.round(2)
+        
+
+a=tax
+b=a.round(2)
+x=b
+b=b*100
+b=b.to_i
+c=b%100
+d=c%5
+
+if(d==0)
+    tax=x
+else
+    tax= x+(0.01*(5-d))
+end
+tax=tax.round(2)
     return tax
 	end
 end
